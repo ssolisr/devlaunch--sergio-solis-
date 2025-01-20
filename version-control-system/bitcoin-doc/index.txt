@@ -36,3 +36,10 @@ siendo un pilar fundamental en el ecosistema de las criptomonedas y ha inspirado
 la creación de miles de otras criptomonedas y aplicaciones basadas en blockchain. 
 Su impacto en las finanzas, la tecnología y la economía global continúa siendo 
 objeto de debate e innovación.
+
+En resumen, Bitcoin es una criptomoneda descentralizada que utiliza la tecnología
+blockchain para permitir transacciones seguras, transparentes e inmutables sin 
+depender de intermediarios. Con un suministro fijo de 21 millones de monedas y un 
+diseño deflacionario, se ha convertido en un importante refugio de valor y un 
+catalizador de innovación en las finanzas y la tecnología, a pesar de enfrentar 
+desafíos como la volatilidad y la supervisión regulatoria.
