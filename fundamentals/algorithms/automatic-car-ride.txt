@@ -1,0 +1,16 @@
+Proporciona una solución detallada de un archivo .txt de las acciones que realizarías
+al prepararte para conducir un automovil automático
+
+Este ejercicios esta diseñado para ayudarte a entender los conceptos basicos de los
+algoritmos al darte un ejemplo del mundo real sobre cómo llevar tu coche a dar un paseo.
+
+Solución:
+
+- buscar las llaves
+- dirigirse al automovil
+- abrir la puerta con las llaves
+- sentarse en el auto
+- quitar freno de mano
+- poner marcha en neutro
+- encender el vehículo con las llaves
+- poner la marcha en modo conducción D (drive)
