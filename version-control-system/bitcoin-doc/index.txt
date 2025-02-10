@@ -1,0 +1,45 @@
+¿Qué es un Bitcoin?
+
+
+Bitcoin es una criptomoneda descentralizada creada en 2008 por una persona o grupo 
+bajo el seudónimo de Satoshi Nakamoto. Funciona a través de una red de computadoras
+que validan y registran transacciones de forma segura y transparente, utilizando
+la tecnología blockchain. A diferencia de las monedas tradicionales, Bitcoin no 
+está controlado por ningún gobierno ni institución financiera. Su suministro está 
+limitado a 21 millones de monedas, lo que busca evitar la inflación. Bitcoin ha 
+sido visto tanto como una reserva de valor, similar al oro, como una alternativa 
+para realizar pagos sin intermediarios.
+
+Utiliza la tecnología blockchain, una base de datos distribuida y pública que 
+registra cada transacción de manera inmutable y transparente. Cada bloque en la 
+cadena contiene un conjunto de transacciones verificadas, las cuales son validadas 
+por una red global de computadoras, conocidas como nodos.
+
+El proceso de validación, llamado minería, utiliza un mecanismo de consenso conocido
+como prueba de trabajo (Proof of Work), en el que los mineros resuelven complejos 
+problemas matemáticos para añadir nuevos bloques a la cadena. A cambio, reciben una 
+recompensa en forma de bitcoins recién creados, aunque esta recompensa disminuye 
+aproximadamente cada cuatro años en un evento conocido como halving, lo que limita
+ la cantidad total de bitcoins a un máximo de 21 millones.
+
+Bitcoin también se distingue por su diseño deflacionario, ya que su oferta fija 
+contrasta con las monedas fiduciarias, que pueden ser emitidas ilimitadamente 
+por los bancos centrales. Esto ha llevado a considerarlo como un activo de refugio 
+frente a la inflación y la incertidumbre económica. Aunque en sus primeros años 
+Bitcoin fue principalmente utilizado como medio de pago, su uso ha evolucionado, y 
+actualmente es visto más como una reserva de valor o una inversión especulativa.
+
+Sin embargo, su adopción también ha enfrentado desafíos, como la volatilidad de su
+precio, el consumo energético de la minería y su uso en actividades ilícitas 
+debido a la pseudonimidad de las transacciones. A pesar de ello, Bitcoin sigue 
+siendo un pilar fundamental en el ecosistema de las criptomonedas y ha inspirado 
+la creación de miles de otras criptomonedas y aplicaciones basadas en blockchain. 
+Su impacto en las finanzas, la tecnología y la economía global continúa siendo 
+objeto de debate e innovación.
+
+En resumen, Bitcoin es una criptomoneda descentralizada que utiliza la tecnología
+blockchain para permitir transacciones seguras, transparentes e inmutables sin 
+depender de intermediarios. Con un suministro fijo de 21 millones de monedas y un 
+diseño deflacionario, se ha convertido en un importante refugio de valor y un 
+catalizador de innovación en las finanzas y la tecnología, a pesar de enfrentar 
+desafíos como la volatilidad y la supervisión regulatoria.
