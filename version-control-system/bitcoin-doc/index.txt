@@ -1,12 +1,2 @@
 ¿Qué es un Bitcoin?
 
-
-Bitcoin es una criptomoneda descentralizada creada en 2008 por una persona o grupo 
-bajo el seudónimo de Satoshi Nakamoto. Funciona a través de una red de computadoras
-que validan y registran transacciones de forma segura y transparente, utilizando
-la tecnología blockchain. A diferencia de las monedas tradicionales, Bitcoin no 
-está controlado por ningún gobierno ni institución financiera. Su suministro está 
-limitado a 21 millones de monedas, lo que busca evitar la inflación. Bitcoin ha 
-sido visto tanto como una reserva de valor, similar al oro, como una alternativa 
-para realizar pagos sin intermediarios.
-
