@@ -4,6 +4,7 @@
     "target": "ES6",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "noImplicitThis": false
+    "noImplicitThis": false,
+    "esModuleInterop": true
   }
 }
