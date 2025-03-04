@@ -1,51 +1,50 @@
 /*
-vowel-counter.ts
+casino-profits.ts
 
-En este ejercicio, crearás una funcién que reciba una cadena de texto y cuente
-el número de vocales que contiene (tanto minúsculas como mayúsculas).
+En un casino en linea han implementado un nuevo juego, que consiste en lanzar
+tres dados y anotar sus valores. Si la suma de estos valores es mayor o igual a 10, 
+el apostador gana $10; de lo contrario, pierde $15.
 
-La función deberá iterar a través de cada caracter en la cadena dada y verificar
-si es una vocal (a, e, i, 0, u). Para facilitar la verificaci6n, puedes almacenar
-las vocales en un conjunto 0 array.
+Para probar el programa a fondo, Simularas 50 intentos de personas jugando,
+cada jugador simula un intento.
 
-La función debe devolver un objeto con el total de vocales encontradas y un
-desglose de cuantas veces aparece cada vocal en la cadena.
+Después de que todos los jugadores hayan terminado sus intentos,
+encuentra el resultado de las ganancias del casino empezando de 0.
 
-Ejemplo de uso:
-console.log(countVowels("Hello, World!")) // { total: 3, a: 0, e: 1, i: 0, o: 2, u: 0 }
+El resultado puede ser tanto positivo como negativo, donde negativo representa
+que el casino perdió dinero ya que los jugadores ganaron mas dinero del que
+perdieron.
+
+Si pruebas varias veces el código puedes topar con diferentes resultados como:
+100, 150, -50, -25, 75
+
+Pero mayormente dará más números positivos que negativos en ganancias, porque recuerde que
+"la casa (casino) nunca pierde..."
+
 */
 
-interface VowelCount {
-  [key: string]: number
+const GAME_ATTEMPTS = 50
+const MIN_DIE_FACE = 1
+const MAX_DIE_FACE = 6
+
+const rollDice = (): number => {
+  return Math. floor(Math. random() * MAX_DIE_FACE) + MIN_DIE_FACE
 }
 
-const isVowel = (letter: string): boolean  => { 
-  return (
-    letter === 'a' ||
-    letter === 'e' ||
-    letter === 'i' ||
-    letter === 'o' ||
-    letter === 'u'
-  )
+export const getCasinoProfits = (): number => {
+  let profit = 0
+
+  for (let i = 1; i <= GAME_ATTEMPTS; i++) {
+    const dicel = rollDice()
+    const dice2 = rollDice()
+    const dice3 = rollDice()
+
+    const sum = dicel + dice2 + dice3
+
+    profit += (sum >= 10) ? -10: 15
+  }
+
+  return profit
 }
 
-const countVowels = (input: string): VowelCount => {
-    const vowelCount: VowelCount = {
-      a: 0,
-      e: 0,
-      i: 0,
-      o: 0,
-      u: 0,
-      total: 0
-    }
-
-    for (const letter of input.toLowerCase()) {   // for (let i = 0; i < input.length; i++) {const letter = input.toLowerCase()[i] if (isVowel....)}
-      if (isVowel(letter)) {
-        vowelCount[letter] += 1
-        vowelCount.total += 1
-      }
-    }
-    return vowelCount
-}
-
-console. log(countVowels("Hola, Papillo!"))
+console.log(getCasinoProfits())
