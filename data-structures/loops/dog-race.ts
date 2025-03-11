@@ -35,36 +35,6 @@ Tenemos un empate!
 
 */
 
-/*
-const MAX_STEP = 3
-const LANE_LENGHT = 20
-const FINISH_LINE_POSITION = 0
-
-const dogIteration = function (){
-    // const aleatoryNumber = Math.floor(Math.random() * MAX_STEP) + 1
-    let metersLeftwhiteDogRaceTrack = 20
-    let metersLeftyellowDogRaceTrack = 20
-
-    for(let i = 1, i <= 0, i++){
-
-    }
-    
-    let whiteDogRaceTrackString = '🏁|-------------------🐩|'
-    
-    let yellowDogRaceTrackString = '🏁|-------------------🐕|'
-    
-    const whiteDogSteps =  Math.floor(Math.random() * MAX_STEP) + 1
-    console.log(`The steps took for white dog in this iteration is: ${whiteDogRaceTrackString}`)
-    
-    const yellowDogSteps = Math.floor(Math.random() * MAX_STEP) + 1
-    console.log(`The steps took for white dog in this iteration is: ${yellowDogRaceTrackString}`)
-
-
-
-}
-
-*/
-
 import promptSync from 'prompt-sync';
 
 const prompt = promptSync();
@@ -79,13 +49,17 @@ function carreraDePerrosTS(): void {
       return Math.floor(Math.random() * 3) + 1;
   }
   
+  let pista1: string = "🏁|" + "⬅️  ".repeat(Math.max(0, posicionPerro1)) + `🐕 ` + "🐾 ".repeat(pistaLongitud - Math.max(0, posicionPerro1)) + "|";
+  let pista2: string = "🏁|" + "⬅️  ".repeat(Math.max(0, posicionPerro2)) + `🐩 ` + "🐾 ".repeat(pistaLongitud - Math.max(0, posicionPerro2)) + "|";
+  console.log("En sus marcas:\n")
+  console.log(pista1);
+  console.log(pista2,"\n");
+
   const startRace = prompt("¿Quieres iniciar la carrera de perros? (si/no): ");
     if (startRace.toLowerCase() !== "si") {
         console.log("Carrera cancelada. ¡Hasta la próxima!");
         return;
     }
-
-
   
     while (posicionPerro1 > 0 && posicionPerro2 > 0) {
         let pasosPerro1 = moverPerro();
@@ -94,10 +68,10 @@ function carreraDePerrosTS(): void {
         posicionPerro2 -= pasosPerro2;
 
         // console.clear();
-        console.log(`Turno ${turno}:`);
+        console.log(`\nTurno ${turno}:`);
 
-        let pista1: string = `(${pasosPerro1} ${pasosPerro1 === 1 ? 'paso ' : 'pasos'}) --> ` + "🏁|" + "⬅️  ".repeat(Math.max(0, posicionPerro1)) + `🐕 ` + "🐾 ".repeat(pistaLongitud - Math.max(0, posicionPerro1)) + "|";
-        let pista2: string = `(${pasosPerro2} ${pasosPerro2 === 1 ? 'paso ' : 'pasos'}) --> ` + "🏁|" + "⬅️  ".repeat(Math.max(0, posicionPerro2)) + `🐩 ` + "🐾 ".repeat(pistaLongitud - Math.max(0, posicionPerro2)) + "|";
+        pista1 = `(${pasosPerro1} ${pasosPerro1 === 1 ? 'paso ' : 'pasos'}) --> ` + "🏁|" + "⬅️  ".repeat(Math.max(0, posicionPerro1)) + `🐕 ` + "🐾 ".repeat(pistaLongitud - Math.max(0, posicionPerro1)) + "|";
+        pista2 = `(${pasosPerro2} ${pasosPerro2 === 1 ? 'paso ' : 'pasos'}) --> ` + "🏁|" + "⬅️  ".repeat(Math.max(0, posicionPerro2)) + `🐩 ` + "🐾 ".repeat(pistaLongitud - Math.max(0, posicionPerro2)) + "|";
 
         console.log(pista1);
         console.log(pista2);
@@ -117,3 +91,59 @@ function carreraDePerrosTS(): void {
 }
 
 carreraDePerrosTS();
+
+
+/*
+
+const MAX_STEP = 3
+const LANE_LENGTH = 20
+const FINISH_LINE_POSITION = 0
+
+const moveDog = (position: number): number => {
+  const steps = Math.floor(Math. random() * MAX_STEP) + 1
+  const newPosition = position - steps
+  const isFinishLine = newPosition <= FINISH_LINE_POSITION
+  return isFinishLine ? FINISH_LINE_POSITION : newPosition
+}
+
+const getLane = (laneLength: number, dogPosition: number, dog: string): string => {
+  let lane = '-'.repeat(laneLength).split('')
+
+  lane[dogPosition] = dog
+
+  for (let i = laneLength - 1; i > dogPosition; i--) {
+    if (lane[i] === '-') lane[i] = '🐾'
+  }
+  
+  return `🏁|${lane.join('')}|`
+}
+
+const dogsRace = (): void => {
+  let dog1Position = LANE_LENGTH - 1
+  let dog2Position = LANE_LENGTH - 1
+
+  while (true) {
+    const isThereAWinner = (
+      dog1Position <= FINISH_LINE_POSITION ||
+      dog2Position <= FINISH_LINE_POSITION
+    );
+  
+    if (isThereAWinner) {
+      const isDraw = dog1Position === dog2Position
+      console. log(`¡Tenemos un ${isDraw ? 'empate' : 'ganador'}!!`)
+      break
+    }
+
+    dog1Position = moveDog(dog1Position)
+    dog2Position = moveDog(dog2Position)
+    
+    const dogLane1 = getLane(LANE_LENGTH, dog1Position, '🐕')
+    const dogLane2 = getLane(LANE_LENGTH, dog2Position, '🐩')
+
+    console.log(`${dogLane1}\n${dogLane2}\n`)
+  }
+}
+
+dogsRace()
+
+*/
