@@ -28,9 +28,7 @@ const subsequence: string = 'aga'
 function SubsequenceInDNA (dna: string, subsequence: string){
   for ( let i: number = 0; i < dna.length - 3; i++){
     // console.log(subsequence[0], dna[i], subsequence[1],  dna[i+1], subsequence[2], dna[i+2])
-    if (dna[i] === subsequence[0] && dna[i+1] === subsequence[1] && dna[i+2] === subsequence[2]){
-      return true
-    }
+    if (dna[i] === subsequence[0] && dna[i+1] === subsequence[1] && dna[i+2] === subsequence[2]) return true
   }
   return false
 } 
@@ -47,7 +45,7 @@ const subsequence: string = ‘aga’
 
 const isSubsequenceInDNA = (dna: string, match: string): boolean => {
   let subsequence = ""
-  
+
   for(let i = 0 i <= dna.length - match.length; i++){
     subsequence = dna.slice(i, i + match.length)
     if (subsequence === match) return true
